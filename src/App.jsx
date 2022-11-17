@@ -34,12 +34,25 @@ const tweetsArray = [
   },
 ];
 
+/* function Tweets(props) {
+  return <div>{props.children}</div>;
+} */
+
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      {/*<Tweets> */}
+      {/* <Tweet tweet={tweetsArray[0]} /> */}
+      {tweetsArray.map((d, idx) => (
+        <Tweet key={idx} tweet={tweetsArray[idx]} />
+      ))}
+      {/*</Tweets> */}
     </div>
   );
 }
 
 export default App;
+
+//{tweetsArray.map((tweet, idx) => {
+//  return <Tweet tweet={tweetsArray[idx]} />;
+//})}
